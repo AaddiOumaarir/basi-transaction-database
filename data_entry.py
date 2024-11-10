@@ -36,3 +36,4 @@ def get_category():
 
 def get_description():
     description = input("Enter description: ")
+    return description
