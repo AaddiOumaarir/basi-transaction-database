@@ -2,11 +2,11 @@ from datetime import datetime
 
 
 
-CATEGORIES = {"I": "income", "E": "Expense"}
+CATEGORIES = {"I": "Income", "E": "Expense"}
 
 def get_date(prompt, allowed_default=False):
     date_input = input(prompt)
-    if allowed_default and not date_input:
+    if not allowed_default and not date_input:
         return datetime.today().strftime("%d-%m-%Y")
     try:
         valide_date = datetime.strptime(date_input, "%d-%m-%Y")
